@@ -31,6 +31,13 @@ class CityListTest {
         });
     }
     @Test
+    public void testHasCity() {
+        CityList cityList = mockCityList();
+        City city = new City("Calgary", "AB");
+        cityList.add(city);
+        assertTrue(cityList.hasCity(city));
+    }
+    @Test
     void testGetCities() {
         CityList cityList = mockCityList();
         // This line checks if the first city in the cityList (retrieved by cityList.getCities().get(0))
